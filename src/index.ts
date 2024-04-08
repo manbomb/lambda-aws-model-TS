@@ -1,4 +1,4 @@
-import { APIGatewayProxyEventV2, APIGatewayProxyStructuredResultV2 } from "aws-lambda"
+import { APIGatewayProxyEventV2, APIGatewayProxyStructuredResultV2 } from "aws-lambda";
 import Router from "lambda-router-typescript";
 
 type LambdaFunctionUrlResult = APIGatewayProxyStructuredResultV2
@@ -8,7 +8,7 @@ export async function handler(event: LambdaFunctionUrlEvent): Promise<LambdaFunc
 
     const router = new Router();
 
-    router.get('/', async (event) => ({ message: 'Oi!', event }));
+    router.get('/', async (event) => ({}));
 
     try {
         const response = await router.call(event);
